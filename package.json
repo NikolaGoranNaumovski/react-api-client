@@ -16,15 +16,20 @@
       "types": "./index.d.ts"
     }
   },
-
-  "publishConfig": {
-    "directory": "dist"
-  },
-
   "scripts": {
     "build": "tsup",
-    "prepublishOnly": "npm run build"
+    "move-files": "node move-files.js",
+    "prepack": "npm run build && npm run move-files",
+    "prepublishOnly": "npm run build && npm run move-files"
   },
+
+   "files": [
+    "dist",
+    "index.d.ts",
+    "index.js",
+    "index.js.map",
+    "package.json"
+  ],
 
   "peerDependencies": {
     "react": ">=17"
