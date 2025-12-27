@@ -1,15 +1,12 @@
 {
   "name": "@nnaumovski/react-api-client",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Configurable API client with React provider and hooks",
   "author": "nnaumovski",
   "license": "ISC",
-
   "type": "module",
-
   "main": "./index.js",
   "types": "./index.d.ts",
-
   "exports": {
     ".": {
       "import": "./index.js",
@@ -19,25 +16,25 @@
   "scripts": {
     "build": "tsup",
     "move-files": "node move-files.js",
+    "publish-package": "npm pack --dry-run && npm publish --access public && rm -rf index.js index.d.ts index.js.map dist",
     "prepack": "npm run build && npm run move-files",
     "prepublishOnly": "npm run build && npm run move-files"
   },
-
-   "files": [
-    "dist",
+  "files": [
     "index.d.ts",
     "index.js",
     "index.js.map",
     "package.json"
   ],
-
   "peerDependencies": {
     "react": ">=17"
   },
-
   "devDependencies": {
-    "typescript": "^5.9.3",
+    "@types/react": "^19.2.7",
     "tsup": "^8.5.1",
-    "@types/react": "^19.2.7"
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security"
   }
 }
