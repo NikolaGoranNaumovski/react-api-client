@@ -1,0 +1,36 @@
+{
+  "name": "@nnaumovski/react-api-client",
+  "version": "1.0.0",
+  "description": "Configurable API client with React provider and hooks",
+  "author": "nnaumovski",
+  "license": "ISC",
+
+  "type": "module",
+
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+
+  "files": ["dist"],
+
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
+  },
+
+  "peerDependencies": {
+    "react": ">=17"
+  },
+
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "tsup": "^8.5.1",
+    "@types/react": "^19.2.7"
+  }
+}
