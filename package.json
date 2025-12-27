@@ -1,6 +1,6 @@
 {
   "name": "@nnaumovski/react-api-client",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Configurable API client with React provider and hooks",
   "author": "nnaumovski",
   "license": "ISC",
@@ -24,7 +24,8 @@
     "index.d.ts",
     "index.js",
     "index.js.map",
-    "package.json"
+    "package.json",
+    "README.md"
   ],
   "peerDependencies": {
     "react": ">=17"
